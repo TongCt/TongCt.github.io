@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, World">
+  <meta name="keywords" content="java 数据结构,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="a blog">
-<meta name="keywords" content="java,programming,Writing,">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://www.tongpupu.xyz/categories/index.html">
+<meta name="description" content="今天做了一个leetcode上的题：求无重复最小字符串。这道题有一个思路就是构建一个滑动的窗口，例如[i,j]是一个窗口，在字符串上滑动，先让j++如果s[j]不在在我们建立的set里，就把它加加进去，同时j往下滑，如果j在这个窗口里，说明有重复的字符串，我们让i往下滑，记录最长的字符串大小。这道算法题用到了java里的set概念。所以这里就介绍一下set的具体的用法：set几何中没有重复的元素，">
+<meta name="keywords" content="java 数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java map的用法">
+<meta property="og:url" content="http://www.tongpupu.xyz/2019/02/11/java set的应用/index.html">
 <meta property="og:site_name" content="Tong&#39;s Blog">
-<meta property="og:description" content="a blog">
+<meta property="og:description" content="今天做了一个leetcode上的题：求无重复最小字符串。这道题有一个思路就是构建一个滑动的窗口，例如[i,j]是一个窗口，在字符串上滑动，先让j++如果s[j]不在在我们建立的set里，就把它加加进去，同时j往下滑，如果j在这个窗口里，说明有重复的字符串，我们让i往下滑，记录最长的字符串大小。这道算法题用到了java里的set概念。所以这里就介绍一下set的具体的用法：set几何中没有重复的元素，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-26T13:53:59.120Z">
+<meta property="og:updated_time" content="2019-02-11T16:04:48.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="a blog">
+<meta name="twitter:title" content="java map的用法">
+<meta name="twitter:description" content="今天做了一个leetcode上的题：求无重复最小字符串。这道题有一个思路就是构建一个滑动的窗口，例如[i,j]是一个窗口，在字符串上滑动，先让j++如果s[j]不在在我们建立的set里，就把它加加进去，同时j往下滑，如果j在这个窗口里，说明有重复的字符串，我们让i往下滑，记录最长的字符串大小。这道算法题用到了java里的set概念。所以这里就介绍一下set的具体的用法：set几何中没有重复的元素，">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://www.tongpupu.xyz/categories/">
+  <link rel="canonical" href="http://www.tongpupu.xyz/2019/02/11/java set的应用/">
 
 
 
 
 
-  <title>categories | Tong's Blog</title>
+  <title>java map的用法 | Tong's Blog</title>
   
 
 
@@ -283,33 +283,195 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.tongpupu.xyz/2019/02/11/java set的应用/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jingyu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/large/007je5wjly1fzk9cce65aj30rs0rswfj.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tong's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">java map的用法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-11T23:41:22+08:00">
+                2019-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>今天做了一个leetcode上的题：求无重复最小字符串。<br>这道题有一个思路就是构建一个滑动的窗口，例如[i,j]是一个窗口，在字符串上滑动，先让j++如果s[j]不在在我们建立的set里，就把它加加进去，同时j往下滑，如果j在这个窗口里，说明有重复的字符串，我们让i往下滑，记录最长的字符串大小。<br>这道算法题用到了java里的set概念。所以这里就介绍一下set的具体的用法：<br>set几何中没有重复的元素，map中包含的是键值跟对应的元素。<br>用法：<code>set&lt;&gt;set = new Hashset&lt;&gt;();</code><br>判定是否有重复元素的时候调用<code>set.contain()</code>函数，此外还有<code>set.add()</code>进行操作。<br>把代码附上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int lengthOfLongestSubstring(String s) &#123;</span><br><span class="line">        int ans=0;</span><br><span class="line">        int i,j=0;</span><br><span class="line">        if(s.length()==1)&#123;</span><br><span class="line">            ans=1;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            for(i=0;i&lt;s.length()-1;i++)&#123;</span><br><span class="line">           </span><br><span class="line">                Set&lt;Character&gt; set = new HashSet&lt;&gt;();</span><br><span class="line">                set.add(s.charAt(i));</span><br><span class="line">                int max_size=1;</span><br><span class="line">                if(ans&lt;max_size)&#123;</span><br><span class="line">                    ans=max_size;</span><br><span class="line">                &#125;</span><br><span class="line">                for(j=i+1;j&lt;s.length();j++)&#123;</span><br><span class="line">                    if(!set.contains(s.charAt(j)))&#123;</span><br><span class="line">                        set.add(s.charAt(j));</span><br><span class="line">                        max_size++;</span><br><span class="line">                        if(ans&lt;max_size)&#123;</span><br><span class="line">                         ans=max_size;</span><br><span class="line">                    &#125;</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        break;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks for your candy</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/wechat.png" alt="jingyu 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/alipay.jpg" alt="jingyu 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java-数据结构/" rel="tag"># java 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/30/小情书/" rel="next" title="小情书">
+                <i class="fa fa-chevron-left"></i> 小情书
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
