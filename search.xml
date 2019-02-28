@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F02%2F28%2Ftest1%2F</url>
+    <content type="text"><![CDATA[在此处输入标题test1标签（空格分隔）： 未分类 在此输入正文test my blog]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F02%2F22%2Fhello%2F</url>
+    <content type="text"><![CDATA[title: hello worlddate: 2019-01-26 16:06:42 tags: “test”hello world Test the blog.]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[java map的用法]]></title>
     <url>%2F2019%2F02%2F11%2Fjava%20set%E7%9A%84%E5%BA%94%E7%94%A8%2F</url>
     <content type="text"><![CDATA[今天做了一个leetcode上的题：求无重复最小字符串。这道题有一个思路就是构建一个滑动的窗口，例如[i,j]是一个窗口，在字符串上滑动，先让j++如果s[j]不在在我们建立的set里，就把它加加进去，同时j往下滑，如果j在这个窗口里，说明有重复的字符串，我们让i往下滑，记录最长的字符串大小。这道算法题用到了java里的set概念。所以这里就介绍一下set的具体的用法：set几何中没有重复的元素，map中包含的是键值跟对应的元素。用法：set&lt;&gt;set = new Hashset&lt;&gt;();判定是否有重复元素的时候调用set.contain()函数，此外还有set.add()进行操作。把代码附上：1234567891011121314151617181920212223242526272829303132class Solution &#123; public int lengthOfLongestSubstring(String s) &#123; int ans=0; int i,j=0; if(s.length()==1)&#123; ans=1; &#125;else&#123; for(i=0;i&lt;s.length()-1;i++)&#123; Set&lt;Character&gt; set = new HashSet&lt;&gt;(); set.add(s.charAt(i)); int max_size=1; if(ans&lt;max_size)&#123; ans=max_size; &#125; for(j=i+1;j&lt;s.length();j++)&#123; if(!set.contains(s.charAt(j)))&#123; set.add(s.charAt(j)); max_size++; if(ans&lt;max_size)&#123; ans=max_size; &#125; &#125;else&#123; break; &#125; &#125; &#125; &#125; return ans; &#125;&#125;]]></content>
@@ -32,10 +42,5 @@
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2019%2F01%2F26%2Fhello%2F</url>
-    <content type="text"><![CDATA[title: hello worlddate: 2019-01-26 16:06:42 tags: “test”hello world Test the blog.]]></content>
   </entry>
 </search>
