@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F03%2F27%2Fubuntu%E4%B8%8B%E5%AE%89%E8%A3%85shadowsocks%2F</url>
-    <content type="text"><![CDATA[ubuntu下安装shadowsocks标签（空格分隔）： ubuntu shadowsocks ubuntu系统是18.4，如果是16.04的版本不支持chacha20-ietf-poly1305加密，在17.04及以上的版本可以直接安装shadowsocks-libev. ###安装shadowsocks12sudo apt install python-pipsudo apt install shadowsocks-libev ###设置配置文件1sudo gedit /etc/shadowsocks-libev/config.json 然后编辑服务器的地址，密码之类。这一步之后就可以在终端用命令行打开ss了1ss-local -c /etc/shadowsocks-libev/config.json 运行效果如下： ###配置chrome代理完成上面的步骤还不能访问google，还需要设置代理服务，下载chromium1sudo apt-get install chromium-browser 然后到github上下载SwitchyOmega.crx文件在chrome里输入chrome://extensions/然后把那.crx文件后缀改成.zip拖入到chrome的扩展里进行安装。完成以后在情景模式中选择proxy,在代理服务器中的代理协议选择 socks5，本地代理服务器 127.0.0.1，代理窗口1080。完成之后，一定一定要点击下面的应用选项，进行保存！！最后一部是选择proxy，这样扩展程序的圈就从黑色变成了蓝色，就可以顺利的访问google了]]></content>
+    <title><![CDATA[ubuntu下安装ss科学上网]]></title>
+    <url>%2F2019%2F03%2F27%2Fubuntu%E4%B8%8B%E5%AE%89%E8%A3%85ss%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
+    <content type="text"></content>
   </entry>
   <entry>
     <title></title>
