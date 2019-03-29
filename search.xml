@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[两两交换链表中的节点]]></title>
+    <url>%2F2019%2F03%2F29%2F%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。 示例: 给定 1-&gt;2-&gt;3-&gt;4, 你应该返回 2-&gt;1-&gt;4-&gt;3. 我们把这个题拆成小问题，每两个相邻的指针进行交换容易实现，关键是怎么把每个交换好的小部分连接起来，我们用到了一个辅助指针用来指向上一个小块的末尾指针，让上一个换好位置的小块与下一个换好位置的指针相连接。12345678910111213141516171819202122232425262728293031/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* swapPairs(ListNode* head) &#123; if(head==NULL||head-&gt;next==NULL)&#123; return head; &#125; ListNode *p=head, *q = head-&gt;next,*r=head; while(1)&#123; p-&gt;next=q-&gt;next; q-&gt;next=p; if(p==head)&#123; head=q; &#125; p=p-&gt;next; if(p==NULL || p-&gt;next==NULL) break; q=p-&gt;next; r-&gt;next=q; //这里的r指针表示的是上一个交换组合的后一个元素，这样就可以把下一个交换元素组合连接在一起了 r=p; &#125; return head; &#125;&#125;;]]></content>
+      <tags>
+        <tag>leetcode 链表 c++ 算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ubuntu下安装ss科学上网]]></title>
     <url>%2F2019%2F03%2F27%2Fubuntu%E4%B8%8B%E5%AE%89%E8%A3%85ss%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
     <content type="text"><![CDATA[##ubuntu下安装shadowsocks ubuntu系统是18.4，如果是16.04的版本不支持chacha20-ietf-poly1305加密，在17.04及以上的版本可以直接安装shadowsocks-libev. ##安装shadowsocks12sudo apt install python-pipsudo apt install shadowsocks-libev ##设置配置文件1sudo gedit /etc/shadowsocks-libev/config.json 然后编辑服务器的地址，密码之类。这一步之后就可以在终端用命令行打开ss了1ss-local -c /etc/shadowsocks-libev/config.json 运行效果如下： ##配置chrome代理完成上面的步骤还不能访问google，还需要设置代理服务，下载chromium1sudo apt-get install chromium-browser 然后到github上下载SwitchyOmega.crx文件在chrome里输入chrome://extensions/然后把那.crx文件后缀改成.zip拖入到chrome的扩展里进行安装。完成以后在情景模式中选择proxy,在代理服务器中的代理协议选择 socks5，本地代理服务器 127.0.0.1，代理窗口1080。完成之后，一定一定要点击下面的应用选项，进行保存！！最后一部是选择proxy，这样扩展程序的圈就从黑色变成了蓝色，就可以顺利的访问google了]]></content>
