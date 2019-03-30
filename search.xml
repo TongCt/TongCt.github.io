@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[狗狗我爱你]]></title>
+    <url>%2F2019%2F03%2F30%2F%E7%8B%97%E7%8B%97%E6%88%91%E7%88%B1%E4%BD%A0%2F</url>
+    <content type="text"><![CDATA[狗狗真好看]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[旋转链表]]></title>
     <url>%2F2019%2F03%2F30%2F%E6%97%8B%E8%BD%AC%E9%93%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[这道题使用的是单链表连成一个循环链表，然后移步更换头节点：1234567891011121314151617181920212223242526272829303132333435/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* rotateRight(ListNode* head, int k) &#123; ListNode* p = head; int len=1; if(head==NULL || head-&gt;next==NULL)&#123; return head; &#125; while(p-&gt;next!=NULL)&#123; len=len+1; p=p-&gt;next; &#125; if(k%len==0)&#123; return head; &#125; p-&gt;next=head; int move=len-k%len; while(move--)&#123; p=p-&gt;next; &#125; head=p-&gt;next; p-&gt;next=NULL; return head; &#125;&#125;;]]></content>
