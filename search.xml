@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[旋转链表]]></title>
+    <url>%2F2019%2F03%2F30%2F%E6%97%8B%E8%BD%AC%E9%93%BE%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[这道题使用的是单链表连成一个循环链表，然后移步更换头节点：1234567891011121314151617181920212223242526272829303132333435/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* rotateRight(ListNode* head, int k) &#123; ListNode* p = head; int len=1; if(head==NULL || head-&gt;next==NULL)&#123; return head; &#125; while(p-&gt;next!=NULL)&#123; len=len+1; p=p-&gt;next; &#125; if(k%len==0)&#123; return head; &#125; p-&gt;next=head; int move=len-k%len; while(move--)&#123; p=p-&gt;next; &#125; head=p-&gt;next; p-&gt;next=NULL; return head; &#125;&#125;;]]></content>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[两两交换链表中的节点]]></title>
     <url>%2F2019%2F03%2F29%2F%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9%2F</url>
     <content type="text"><![CDATA[给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。 示例: 给定 1-&gt;2-&gt;3-&gt;4, 你应该返回 2-&gt;1-&gt;4-&gt;3. 我们把这个题拆成小问题，每两个相邻的指针进行交换容易实现，关键是怎么把每个交换好的小部分连接起来，我们用到了一个辅助指针用来指向上一个小块的末尾指针，让上一个换好位置的小块与下一个换好位置的指针相连接。12345678910111213141516171819202122232425262728293031/** * Definition for singly-linked list. * struct ListNode &#123; * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) &#123;&#125; * &#125;; */class Solution &#123;public: ListNode* swapPairs(ListNode* head) &#123; if(head==NULL||head-&gt;next==NULL)&#123; return head; &#125; ListNode *p=head, *q = head-&gt;next,*r=head; while(1)&#123; p-&gt;next=q-&gt;next; q-&gt;next=p; if(p==head)&#123; head=q; &#125; p=p-&gt;next; if(p==NULL || p-&gt;next==NULL) break; q=p-&gt;next; r-&gt;next=q; //这里的r指针表示的是上一个交换组合的后一个元素，这样就可以把下一个交换元素组合连接在一起了 r=p; &#125; return head; &#125;&#125;;]]></content>
